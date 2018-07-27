@@ -3,6 +3,7 @@ const whitespace = () => {
     `)
 }
 // Level 0
+
 const names = [
     "Mr. Fahri",
     "Mr. Abdul",
@@ -13,9 +14,11 @@ const names = [
     "Mr. Hakim"
 ];
 
-const result = names.forEach(function (element) {
-    console.log(element)
+const result = names.map(x => {
+    return x
 })
+console.log("Mapping " + result);
+
 whitespace()
 
 // Level 1-2
@@ -39,17 +42,68 @@ filterName.filterNameByGenderFemale()
 whitespace()
 
 // Level 3 
-const name = "paul"
-const name2 = new RegExp(`${name}`, 'i')
-const name3 = name2.ignoreCase
-const searchPerson = (name) => {}
-const hasil = names.find(function (element) {
-    if(name3 == true){
-        return `Result: ${name2}`
-    }else{
-        return `404`
-    }
-})
+const keyword = "paul"
 
+const search = names.filter(name => {
+    return name.toLowerCase().includes(keyword.toLowerCase());
+});
+console.log(search);
+whitespace()
 
-console.log(hasil)
+// Level 4
+
+const fruit1 = ["Jackfruit", "Watermelon", "Orange"]
+const fruit2 = ["Avocado", "Lemon", "Raspberry", "Strawberry"]
+const joinedFruit = []
+const joinFruit = (fruit) => {
+    fruit.forEach(function (fruit) {
+        joinedFruit.push(fruit)
+    })
+}
+
+const showFruit = () => {
+    joinedFruit.forEach(function (fruit) {
+        console.log(fruit)
+    })
+}
+joinFruit(fruit1)
+joinFruit(fruit2)
+showFruit()
+whitespace()
+
+// Level 5
+
+const names2 = [
+    "Mr. Fahri",
+    null,
+    undefined,
+    "Mr. Abdul",
+    24,
+    "Mrs. Josephhine",
+    "Mr. Joseph",
+    "Mr. Paul",
+    32,
+    "Mrs. Paula",
+    7,
+    22,
+    "Mr. Hakim"
+];
+
+const newArrayElement = []
+const checkDataType = ()=>{
+    names2.forEach(function(element){
+        const dataType = typeof element
+        if(dataType=="string"){
+            newArrayElement.push(element)
+        }
+
+    })
+    console.log(newArrayElement)
+}
+
+const showNewElement = () =>{
+    return newArrayElement
+}
+
+checkDataType()
+whitespace()
