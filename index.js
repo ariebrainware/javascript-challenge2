@@ -4,6 +4,7 @@ const whitespace = () => {
 }
 // Level 0
 
+console.log("Level 0")
 const names = [
     "Mr. Fahri",
     "Mr. Abdul",
@@ -23,6 +24,7 @@ whitespace()
 
 // Level 1-2
 
+console.log("Level 1-2")
 const filterName = {
     filterNameByGenderMale: () => {
         const filteredName = names.filter(function (item) {
@@ -42,6 +44,8 @@ filterName.filterNameByGenderFemale()
 whitespace()
 
 // Level 3 
+
+console.log("level3")
 const keyword = "paul"
 
 const search = names.filter(name => {
@@ -52,6 +56,7 @@ whitespace()
 
 // Level 4
 
+console.log("level 4")
 const fruit1 = ["Jackfruit", "Watermelon", "Orange"]
 const fruit2 = ["Avocado", "Lemon", "Raspberry", "Strawberry"]
 const joinedFruit = []
@@ -73,6 +78,7 @@ whitespace()
 
 // Level 5
 
+console.log("Level 5")
 const names2 = [
     "Mr. Fahri",
     null,
@@ -90,10 +96,10 @@ const names2 = [
 ];
 
 const newArrayElement = []
-const checkDataType = ()=>{
-    names2.forEach(function(element){
+const checkDataType = () => {
+    names2.forEach(function (element) {
         const dataType = typeof element
-        if(dataType=="string"){
+        if (dataType == "string") {
             newArrayElement.push(element)
         }
 
@@ -101,7 +107,7 @@ const checkDataType = ()=>{
     console.log(newArrayElement)
 }
 
-const showNewElement = () =>{
+const showNewElement = () => {
     return newArrayElement
 }
 
